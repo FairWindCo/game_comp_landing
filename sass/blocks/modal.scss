@@ -13,13 +13,14 @@
 }
 
 /* Modal Content/Box */
-.modal-content {
+.modal--content {
   background-color: #fefefe;
   padding: 20px;
   border: 1px solid #888;
   width: 70%; /* Could be more or less, depending on screen size */
   min-width:160px;
   max-width:750px;
+  max-height: 600px;
   position: fixed;
   top:50%;
   left:50%;
@@ -28,17 +29,32 @@
 }
 
 /* The Close Button */
-.close {
+.modal--close {
   color: #000000;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.modal--close:hover,
+.modal--close:focus {
   color: #f1ac0f;
   text-decoration: none;
   cursor: pointer;
 }
+.modal p {
+  font-size: 14px;
+  text-align: left;
+  margin: 10px 10px;
+}
 
+@media #{$mobile-width} {
+  .modal p{
+    font-size: 12px;
+    text-align: left;
+    margin: 5px 5px;
+  }
+  .modal--close{
+    font-size: 18px;
+  }
+}

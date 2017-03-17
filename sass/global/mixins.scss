@@ -69,3 +69,26 @@
   width: 36px;
   border: 2px solid $dark-gray;
 }
+
+
+// Triangle helper mixin (by Yair Even-Or)
+// @param {Direction} $direction - either `top`, `right`, `bottom` or `left`
+// @param {Color} $color [currentcolor] - Triangle color
+// @param {Length} $size [1em] - Triangle size
+// EXAMPLE:
+// span {
+//   @include triangle(bottom, red, 10px);
+// }
+@mixin triangle($direction, $color: currentcolor, $size: 1em) {
+  $size: $size/2;
+  $transparent: rgba($color, 0);
+  $opposite: (top:bottom, right:left, left:right, bottom:top);
+
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: $size solid $transparent;
+  border-#{map-get($opposite, $direction)}-color: $color;
+  margin-#{$direction}: -$size;
+}

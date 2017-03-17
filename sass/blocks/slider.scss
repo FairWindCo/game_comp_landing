@@ -1,0 +1,104 @@
+$slider-color:transparentize($dark-blur-panel,0.7);
+$slide-color:transparentize($dark-blur-panel,0.2);
+$slide-header-color:$footer-color;
+
+.slider-container{
+  min-height: 200px;
+  background: none;
+  padding-bottom: 50px;
+}
+
+.slider--item{
+  display: table-cell;
+  width: 400px;
+  padding: 10px;
+}
+.slider--content{
+  margin: 0 10px;
+  background-color: $slide-color;
+  color: white;
+  min-height: 600px;
+  padding-top: 5px;
+  &::after{
+    display: block;
+    position: absolute;
+    bottom:30px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 180px 0 180px;
+    border-color: $slide-color transparent transparent transparent;
+    line-height: 0px;
+    _border-color: $slider-color #000000 #000000 #000000;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  }
+}
+.slider--content a{
+  margin: 0 auto;
+}
+.slider--content img{
+  max-width:300px;
+  margin: 0 auto;
+  display: block;
+}
+.slider--content h2{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  padding: 3px 2px;
+  background-color: $slide-header-color;
+  width: 100%;
+  margin-top:2px;
+}
+.slider--content p{
+  padding: 0 5px;
+  color: white;
+}
+.slider--content li{
+  padding: 0 7px;
+  color: white;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.slider{
+  position: relative;
+  width:100%;
+  min-height: 200px;
+  background: $slider-color;
+  padding-bottom: 40px;
+  &::after{
+    position: absolute;
+    bottom:-40px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 40px 150px 0 150px;
+    border-color: $slider-color transparent transparent transparent;
+    line-height: 0px;
+    _border-color: $slider-color #000000 #000000 #000000;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  }
+}
+
+@media #{$tablet-width} {
+  .slider{
+    &::after{
+      border-width: 40px 384px 0 384px;
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .slider{
+    &::after{
+      border-width: 40px 600px 0 600px;
+    }
+  }
+
+}
+
+

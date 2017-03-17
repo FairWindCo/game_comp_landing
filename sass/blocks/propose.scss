@@ -1,0 +1,91 @@
+$propose-color:$blue;
+
+.proposition{
+  @include clearfix();
+  position: relative;
+}
+
+.propose {
+  position: relative;
+  min-height: 50px;
+  padding: 3px;
+  background-color: $propose-color;
+  border-radius: 3px;
+
+  &--title{
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &--text{
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}
+.proposition--item--row{
+  display: table-row;
+  width: 100%;
+}
+
+.proposition--items{
+  display: table;
+  width: 100%;
+}
+.proposition--item{
+  width: 50%;
+  display: table-cell;
+  box-sizing: border-box;
+  color:white;
+  padding: 2px 5px;
+  height:45px;
+  vertical-align: middle;
+}
+
+.proposition--item--text{
+  background: linear-gradient(to right, lighten($dark-blur-panel,15%) 0%,lighten($dark-blur-panel,10%) 100%);
+}
+.proposition--item--price{
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(to left, lighten($dark-blur-panel,15%) 0%,lighten($dark-blur-panel,10%) 100%);
+}
+
+.propose::before{
+  content: "";
+  position: absolute;
+  top:10px;
+  left: -20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent $propose-color transparent transparent;
+  line-height: 0px;
+  _border-color: #000000 $propose-color #000000 #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+
+@media #{$tablet-width} {
+  .propose {
+    width: 100%;
+  }
+  .proposition--items{
+    width: 100%;
+    padding: 0 3px;
+  }
+
+}
+
+@media #{$desktop-width} {
+  $propose-width:650px;
+  .propose {
+    float: left;
+    width: $propose-width;
+    height: 129px;
+  }
+  .proposition--items {
+    float: right;
+    width: 1188px-$propose-width;
+  }
+}

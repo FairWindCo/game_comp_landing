@@ -57,7 +57,7 @@ function createModal(nameOfModalElement,nameActivator,noComments) {
       }
     );
     // Get the <span> element that closes the modal
-    modal.find('.close').click(
+    modal.find('.modal--close').click(
       function () {
         // When the user clicks on <span> (x), close the modal
         modal.css("display", "none");
@@ -100,7 +100,7 @@ function createModalWindow(nameOfModalElement) {
     // Get the modal
     var modal = jQuery(nameOfModalElement);
     // Get the <span> element that closes the modal
-    modal.find('.close').click(
+    modal.find('.modal--close').click(
       function () {
         // When the user clicks on <span> (x), close the modal
         modal.css("display", "none");

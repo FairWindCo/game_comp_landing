@@ -19,5 +19,16 @@
 @import "blocks/modal.scss";
 @import "blocks/propose.scss";
 @import "blocks/menu.scss";
+@import "blocks/gialogWindow.scss";
+@import "blocks/contact_form.scss";
+@import "blocks/slider.scss";
+@import "blocks/futures.scss";
+
+main{
+  background-image: url('../img/logo_fon.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+}
 
 

@@ -22,6 +22,10 @@ $propose-color:$blue;
     font-size: 14px;
     padding: 0 10px;
   }
+
+  &--text p{
+    margin: 10px 0px;
+  }
 }
 .proposition--item--row{
   display: table-row;
@@ -40,6 +44,11 @@ $propose-color:$blue;
   padding: 2px 5px;
   height:45px;
   vertical-align: middle;
+}
+.proposition--item--header{
+  margin: 0 2px;
+  display: table-caption;
+  text-align: center;
 }
 
 .proposition--item--text{
@@ -82,7 +91,7 @@ $propose-color:$blue;
   .propose {
     float: left;
     width: $propose-width;
-    height: 129px;
+    height: 176px;
   }
   .proposition--items {
     float: right;

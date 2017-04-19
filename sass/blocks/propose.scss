@@ -75,6 +75,10 @@ $propose-color:$blue;
   _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 }
 
+.proposition--item--row a{
+  text-decoration: none;
+}
+
 @media #{$tablet-width} {
   .propose {
     width: 100%;

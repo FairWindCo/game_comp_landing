@@ -40,6 +40,7 @@ $slide-header-color:$footer-color;
   text-align: center;
   margin: 0 25px;
 }
+
 .slider--content img{
   max-width:250px;
   margin: 0 auto;
@@ -128,8 +129,8 @@ $slide-header-color:$footer-color;
 
     .slider--item{
       display: table-cell;
-      width: 400px;
       padding: 10px;
+      width: 400px;
     }
     .slider--content a{
       text-align: center;
@@ -144,6 +145,7 @@ $slide-header-color:$footer-color;
       margin: 0 10px;
       min-height: 600px;
       padding-top: 5px;
+      width: 360px;
       &::after{
         bottom:-20px;
         border-width: 20px 180px 0 180px;

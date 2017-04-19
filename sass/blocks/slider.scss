@@ -9,25 +9,27 @@ $slide-header-color:$footer-color;
 }
 
 .slider--item{
-  display: table-cell;
-  width: 400px;
+  display: block;
+  width: 280px;
   padding: 10px;
+  margin-top: 10px;
 }
 .slider--content{
-  margin: 0 10px;
+  margin: 0 1px;
   background-color: $slide-color;
   color: white;
-  min-height: 600px;
+  min-height: 300px;
   padding-top: 5px;
+  position: relative;
   &::after{
     display: block;
     position: absolute;
-    bottom:30px;
+    bottom:-20px;
     content: '';
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 20px 180px 0 180px;
+    border-width: 20px 139px 0 139px;
     border-color: $slide-color transparent transparent transparent;
     line-height: 0px;
     _border-color: $slider-color #000000 #000000 #000000;
@@ -35,10 +37,11 @@ $slide-header-color:$footer-color;
   }
 }
 .slider--content a{
-  margin: 0 auto;
+  text-align: center;
+  margin: 0 25px;
 }
 .slider--content img{
-  max-width:300px;
+  max-width:250px;
   margin: 0 auto;
   display: block;
 }
@@ -68,7 +71,7 @@ $slide-header-color:$footer-color;
   width:100%;
   min-height: 200px;
   background: $slider-color;
-  padding-bottom: 40px;
+  padding-bottom: 0px;
   &::after{
     position: absolute;
     bottom:-40px;
@@ -86,6 +89,30 @@ $slide-header-color:$footer-color;
 
 @media #{$tablet-width} {
   .slider{
+    .slider--item{
+      display: table-cell;
+      width: 250px;
+      padding: 1px;
+    }
+    .slider--content img {
+      max-width: 230px;
+    }
+
+    .slider--content a{
+      text-align: center;
+      margin: 0 11px;
+    }
+
+    .slider--content{
+      margin: 0 2px;
+      min-height: 630px;
+      padding-top: 2px;
+      &::after{
+        bottom:-20px;
+        border-width: 20px 115px 0 115px;
+      }
+    }
+
     &::after{
       border-width: 40px 384px 0 384px;
     }
@@ -93,7 +120,36 @@ $slide-header-color:$footer-color;
 }
 
 @media #{$desktop-width} {
+  .slider-container{
+  }
+
   .slider{
+    padding-bottom: 40px;
+
+    .slider--item{
+      display: table-cell;
+      width: 400px;
+      padding: 10px;
+    }
+    .slider--content a{
+      text-align: center;
+      margin: 0 85px;
+    }
+
+    .slider--content img {
+      max-width: 300px;
+    }
+
+    .slider--content{
+      margin: 0 10px;
+      min-height: 600px;
+      padding-top: 5px;
+      &::after{
+        bottom:-20px;
+        border-width: 20px 180px 0 180px;
+      }
+    }
+
     &::after{
       border-width: 40px 600px 0 600px;
     }

@@ -36,7 +36,7 @@ futures{
   margin-top:0px;
   margin-bottom:0px;
   padding-top:40px;
-  padding-bottom:5px;
+  padding-bottom:7px;
   border-radius:0px;
   border-top-left-radius:10px;
   border-top-right-radius:10px;
@@ -44,7 +44,7 @@ futures{
   text-align:center;
   color:white;
   height:30px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 @keyframes stretching {
@@ -76,7 +76,7 @@ futures{
 .futuresContainer--futureBlock div{
   padding:2px;
   min-width:160px;
-  min-height:70px;
+  min-height:50px;
   font-size: 13px;
 }
 
@@ -106,12 +106,48 @@ futures{
     font-size: 20px;
   }
 
+
+}
+
+@media #{$tablet-width} {
+  .futuresContainer--futureBlock img {
+    max-height: 170px;
+    max-width: 170px;
+    height: 120px;
+  }
+  .futuresContainer--futureBlock h2{
+    padding-top:40px;
+    padding-bottom:5px;
+    height:30px;
+  }
+
+  .futuresContainer--futureBlock div{
+    min-height:50px;
+  }
+}
+
+
+@media #{$desktop-width} {
   .futuresContainer--futureBlock h2{
     margin-top:0px;
     margin-bottom:0px;
-    padding-top:60px;
+    padding-top:40px;
     padding-bottom:5px;
-    height:60px;
-    font-size: 25px;
+    border-radius:0px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    background-color:#31A3DD;
+    text-align:center;
+    color:white;
+    height:50px;
+    font-size: 20px;
   }
+
+  .futuresContainer--futureBlock div{
+    padding:2px;
+    min-width:160px;
+    min-height:70px;
+    font-size: 13px;
+  }
+
 }

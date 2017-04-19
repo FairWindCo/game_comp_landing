@@ -40,7 +40,7 @@ $propose-color:$blue;
   width: 50%;
   display: table-cell;
   box-sizing: border-box;
-  color:white;
+  color:black;
   padding: 2px 5px;
   height:45px;
   vertical-align: middle;
@@ -52,12 +52,12 @@ $propose-color:$blue;
 }
 
 .proposition--item--text{
-  background: linear-gradient(to right, lighten($dark-blur-panel,15%) 0%,lighten($dark-blur-panel,10%) 100%);
+  background: linear-gradient(to right, lighten($propose-panel,0%) 0%,lighten($propose-panel,1%) 100%);
 }
 .proposition--item--price{
   text-align: center;
   font-weight: bold;
-  background: linear-gradient(to left, lighten($dark-blur-panel,15%) 0%,lighten($dark-blur-panel,10%) 100%);
+  background: linear-gradient(to left, lighten($propose-panel,0%) 0%,lighten($propose-panel,1%) 100%);
 }
 
 .propose::before{

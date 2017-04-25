@@ -36,6 +36,7 @@ $propose-color:$blue;
   display: table;
   width: 100%;
 }
+
 .proposition--item{
   width: 50%;
   display: table-cell;
@@ -45,18 +46,22 @@ $propose-color:$blue;
   height:45px;
   vertical-align: middle;
 }
+
 .proposition--item--header{
-  margin: 0 2px;
+  margin: 0 0px;
   display: table-caption;
   text-align: center;
+  border: none;
 }
 
 .proposition--item--text{
   background: linear-gradient(to right, lighten($propose-panel,0%) 0%,lighten($propose-panel,1%) 100%);
+  color:white;
 }
 .proposition--item--price{
   text-align: center;
   font-weight: bold;
+  color: #f9acac;
   background: linear-gradient(to left, lighten($propose-panel,0%) 0%,lighten($propose-panel,1%) 100%);
 }
 
@@ -87,6 +92,15 @@ $propose-color:$blue;
     width: 100%;
     padding: 0 3px;
   }
+  .proposition--item{
+    width: 384px;
+  }
+
+  .proposition--item--header .proposition--item--text{
+    text-align: center;
+    border: none;
+    width: 771px;
+  }
 
 }
 
@@ -97,6 +111,25 @@ $propose-color:$blue;
     width: $propose-width;
     height: 176px;
   }
+
+  .proposition--item--header{
+    margin: 0 3px;
+    display: table-caption;
+    text-align: center;
+    border: 1px solid white;
+  }
+
+  .proposition--item{
+    width: 50%;
+  }
+
+  .proposition--item--header .proposition--item--text{
+    margin: 0 0px;
+    text-align: center;
+    border: none;
+    width: 769px;
+  }
+
   .proposition--items {
     float: right;
     width: 1188px-$propose-width;
